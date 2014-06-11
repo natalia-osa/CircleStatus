@@ -1,5 +1,5 @@
 //
-//  CSAppDelegate.h
+//  CSExampleViewController.h
 //  CircleStatus
 //
 //  Created by Natalia Osiecka on 10.6.2014.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface CSExampleViewController : UIViewController
 
 @end

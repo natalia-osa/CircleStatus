@@ -13,14 +13,15 @@
 		645F4EA119472315007D3B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645F4E9F19472315007D3B08 /* InfoPlist.strings */; };
 		645F4EA319472315007D3B08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EA219472315007D3B08 /* main.m */; };
 		645F4EA719472315007D3B08 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EA619472315007D3B08 /* CSAppDelegate.m */; };
-		645F4EAA19472315007D3B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EA819472315007D3B08 /* Main.storyboard */; };
-		645F4EAD19472315007D3B08 /* CSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EAC19472315007D3B08 /* CSViewController.m */; };
+		645F4EAD19472315007D3B08 /* CSExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EAC19472315007D3B08 /* CSExampleViewController.m */; };
 		645F4EAF19472315007D3B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EAE19472315007D3B08 /* Images.xcassets */; };
 		645F4EB619472315007D3B08 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4EB519472315007D3B08 /* XCTest.framework */; };
 		645F4EB719472315007D3B08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9619472315007D3B08 /* Foundation.framework */; };
 		645F4EB819472315007D3B08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9A19472315007D3B08 /* UIKit.framework */; };
 		645F4EC019472315007D3B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EBE19472315007D3B08 /* InfoPlist.strings */; };
 		645F4EC219472315007D3B08 /* CircleStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EC119472315007D3B08 /* CircleStatusTests.m */; };
+		645F4ECD194723D0007D3B08 /* CSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4ECC194723D0007D3B08 /* CSView.m */; };
+		6496AABA1948409F00D4A4A8 /* CSExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6496AAB91948409F00D4A4A8 /* CSExampleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +45,18 @@
 		645F4EA419472315007D3B08 /* CircleStatus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircleStatus-Prefix.pch"; sourceTree = "<group>"; };
 		645F4EA519472315007D3B08 /* CSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAppDelegate.h; sourceTree = "<group>"; };
 		645F4EA619472315007D3B08 /* CSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAppDelegate.m; sourceTree = "<group>"; };
-		645F4EA919472315007D3B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		645F4EAB19472315007D3B08 /* CSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSViewController.h; sourceTree = "<group>"; };
-		645F4EAC19472315007D3B08 /* CSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSViewController.m; sourceTree = "<group>"; };
+		645F4EAB19472315007D3B08 /* CSExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSExampleViewController.h; sourceTree = "<group>"; };
+		645F4EAC19472315007D3B08 /* CSExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSExampleViewController.m; sourceTree = "<group>"; };
 		645F4EAE19472315007D3B08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		645F4EB419472315007D3B08 /* CircleStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		645F4EB519472315007D3B08 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		645F4EBD19472315007D3B08 /* CircleStatusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircleStatusTests-Info.plist"; sourceTree = "<group>"; };
 		645F4EBF19472315007D3B08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		645F4EC119472315007D3B08 /* CircleStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleStatusTests.m; sourceTree = "<group>"; };
+		645F4ECB194723D0007D3B08 /* CSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSView.h; sourceTree = "<group>"; };
+		645F4ECC194723D0007D3B08 /* CSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSView.m; sourceTree = "<group>"; };
+		6496AAB81948409F00D4A4A8 /* CSExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSExampleView.h; sourceTree = "<group>"; };
+		6496AAB91948409F00D4A4A8 /* CSExampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSExampleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +118,9 @@
 			children = (
 				645F4EA519472315007D3B08 /* CSAppDelegate.h */,
 				645F4EA619472315007D3B08 /* CSAppDelegate.m */,
-				645F4EA819472315007D3B08 /* Main.storyboard */,
-				645F4EAB19472315007D3B08 /* CSViewController.h */,
-				645F4EAC19472315007D3B08 /* CSViewController.m */,
-				645F4EAE19472315007D3B08 /* Images.xcassets */,
+				645F4ECF19473250007D3B08 /* Example */,
+				645F4ED019473256007D3B08 /* CircleStatus */,
+				645F4ECE19473242007D3B08 /* Resources */,
 				645F4E9D19472315007D3B08 /* Supporting Files */,
 			);
 			path = CircleStatus;
@@ -150,6 +153,34 @@
 				645F4EBE19472315007D3B08 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		645F4ECE19473242007D3B08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				645F4EAE19472315007D3B08 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		645F4ECF19473250007D3B08 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				645F4EAB19472315007D3B08 /* CSExampleViewController.h */,
+				645F4EAC19472315007D3B08 /* CSExampleViewController.m */,
+				6496AAB81948409F00D4A4A8 /* CSExampleView.h */,
+				6496AAB91948409F00D4A4A8 /* CSExampleView.m */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		645F4ED019473256007D3B08 /* CircleStatus */ = {
+			isa = PBXGroup;
+			children = (
+				645F4ECB194723D0007D3B08 /* CSView.h */,
+				645F4ECC194723D0007D3B08 /* CSView.m */,
+			);
+			name = CircleStatus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +262,6 @@
 			files = (
 				645F4EAF19472315007D3B08 /* Images.xcassets in Resources */,
 				645F4EA119472315007D3B08 /* InfoPlist.strings in Resources */,
-				645F4EAA19472315007D3B08 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645F4ECD194723D0007D3B08 /* CSView.m in Sources */,
 				645F4EA719472315007D3B08 /* CSAppDelegate.m in Sources */,
 				645F4EA319472315007D3B08 /* main.m in Sources */,
-				645F4EAD19472315007D3B08 /* CSViewController.m in Sources */,
+				6496AABA1948409F00D4A4A8 /* CSExampleView.m in Sources */,
+				645F4EAD19472315007D3B08 /* CSExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +313,6 @@
 				645F4EA019472315007D3B08 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		645F4EA819472315007D3B08 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				645F4EA919472315007D3B08 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		645F4EBE19472315007D3B08 /* InfoPlist.strings */ = {
@@ -457,6 +481,7 @@
 				645F4EC719472315007D3B08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		645F4EC819472315007D3B08 /* Build configuration list for PBXNativeTarget "CircleStatusTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +490,7 @@
 				645F4ECA19472315007D3B08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

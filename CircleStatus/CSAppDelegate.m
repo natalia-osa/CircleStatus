@@ -3,16 +3,19 @@
 //  CircleStatus
 //
 //  Created by Natalia Osiecka on 10.6.2014.
-//  Copyright (c) 2014 iOskApps. All rights reserved.
+//  Copyright (c) 2014 AppUnite. All rights reserved.
 //
 
 #import "CSAppDelegate.h"
+#import "CSExampleViewController.h"
 
 @implementation CSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setRootViewController:[[CSExampleViewController alloc] init]];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
