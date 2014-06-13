@@ -7,36 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#define accuracy_epsilon 1
-
-/**
- Model class to fill percentageColorArray. Please note that the order is important.
- **/
-@interface CSPercentageColor : NSObject
-
-/**
- Color to be drawn.
- **/
-@property (nonatomic, strong) UIColor *color;
-
-/**
- It will be recalculated to draw given color with angle. 1.f is 2PI. Please note, that the value must be (0.f; 1.f).
- **/
-@property (nonatomic, assign) CGFloat percentage;
-
-/**
- Common initializer.
- **/
-- (instancetype)initWithColor:(UIColor *)color percentage:(CGFloat)percentage;
-
-@end
-
+#import "CSLegendView.h"
+#import "CSPercentageColor.h"
 
 /**
  Use to draw circle with selected properties in the middle of the view.
  **/
-@interface CSView : UIView
+@interface CSView : UIView <CSLegendViewDelegate>
 
 /**
  By default 1 gray color. Please note that total percentages from this array must give 1.f or less in total. If it is less, in the end of the circle we'll have 'clear' space.
@@ -67,6 +44,21 @@
  Image in place of label. You can support only one of these. You can support both views and set hidden property according to your needs, but keep in mind, that both visible will look ugly.
  **/
 @property (nonatomic, strong, readonly) UIImageView *imageView;
+
+/**
+ Legend view. You can set background color etc here.
+ **/
+@property (nonatomic, strong, readonly) CSLegendView *legendView;
+
+/**
+ Whether to show legend. Position configurable via legendPosition property. Default YES.
+ **/
+@property (nonatomic, assign) BOOL showsLegend;
+
+/**
+ REQUIRED. Determines the radius of a chart. If not supported, will auto-adjust to csView.frame, but Left/Right positions of legend can return wrong height calculation.
+ **/
+@property (nonatomic, assign) CGFloat radius;
 
 /**
  Advanced: 

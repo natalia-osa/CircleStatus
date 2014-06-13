@@ -13,34 +13,11 @@
 #define angleFromPercent(x) (2 * M_PI * x)
 #define radians(x) (x * M_PI / 180)
 #define degrees(x) (x * 180 / M_PI)
-
-@implementation CSPercentageColor
-
-- (instancetype)initWithColor:(UIColor *)color percentage:(CGFloat)percentage {
-    self = [super init];
-    if (self) {
-        _color = color;
-        _percentage = percentage;
-    }
-    return self;
-}
-
-@end
-
-@interface CSView()
-@property (nonatomic, assign) CGFloat radius;
-@end
+#define accuracy_epsilon 1
 
 @implementation CSView
 
 #pragma mark - Inits
-
-- (id)init {
-    if (self = [super init]) {
-        [self commonInit];
-    }
-    return self;
-}
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -64,6 +41,10 @@
     _startAngle = 270.f;
     _fillColor = [UIColor whiteColor];
     
+    _legendView = [[CSLegendView alloc] init];
+    [_legendView setDelegate:self];
+    [self addSubview:_legendView];
+    
     _textLabel = [[UILabel alloc] init];
     [_textLabel setBackgroundColor:[UIColor clearColor]];
     [_textLabel setTextAlignment:NSTextAlignmentCenter];
@@ -73,31 +54,49 @@
     [_imageView setContentMode:UIViewContentModeScaleAspectFit];
     [_imageView setBackgroundColor:[UIColor clearColor]];
     [self addSubview:_imageView];
+    
+    [self setShowsLegend:YES];
 }
 
 #pragma mark - Setters
 
-// redraw everything in case of overloading
 - (void)setPercentageColorArray:(NSArray *)percentageColorArray {
     _percentageColorArray = percentageColorArray;
+    // if we have legend view, redraw it also
+    if (_legendView) {
+        [_legendView setPercentageColorArray:percentageColorArray];
+    }
     
+    // redraw everything (set proper colors etc)
+    [self setNeedsDisplay];
+}
+
+- (void)setShowsLegend:(BOOL)showsLegend {
+    _showsLegend = showsLegend;
+    
+    [_legendView setHidden:!showsLegend];
+    
+    // redraw everything (reposition circle view)
     [self setNeedsDisplay];
 }
 
 #pragma mark - Class methods
 
 - (void)drawRect:(CGRect)rect {
-    // we want the circle to fit to our view
-    _radius = (CGRectGetWidth(rect) - _lineWidth) / 2;
+    // we want the circle to fit to our view if not stated otherwise
+    if (_radius == 0) {
+        NSLog(@"You should supply radius value to skip any unexpected behaviour.");
+        _radius = (MIN(CGRectGetWidth(rect), CGRectGetHeight(rect)) - _lineWidth) / 2;
+    }
     
     // by default draw full gray circle
     if (!_percentageColorArray || _percentageColorArray.count == 0) {
-        _percentageColorArray = @[[[CSPercentageColor alloc] initWithColor:[UIColor grayColor] percentage:1.f]];
+        _percentageColorArray = @[[[CSPercentageColor alloc] initWithTitle:@"Gray" color:[UIColor grayColor] percentage:1.f]];
     }
     
     // make sure data is ok
     [self validateData];
-    
+
     // draw the circle
     [self drawCircle];
 }
@@ -109,8 +108,46 @@
     CGContextRef context= UIGraphicsGetCurrentContext();
     CGContextClearRect(context, self.bounds);
     
+    // draw background color
+    CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor);
+    CGContextFillRect(context, self.bounds);
+    
     // get variables
     CGPoint center = CGPointMake(floorf(CGRectGetMidX(self.bounds)), floorf(CGRectGetMidY(self.bounds)));
+    // in case we're showing legend, we need to move circle to different place
+    if (_showsLegend) {
+        NSInteger circleRadius = _radius + _lineWidth / 2;
+        CGRect legendRect = self.bounds;
+        switch (_legendView.legendPosition) {
+            case CSLegendPositionTop: {
+                center.y = CGRectGetMaxY(self.bounds) - circleRadius;
+                legendRect.size.height -= 2 * circleRadius;
+                break;
+            }
+            case CSLegendPositionRight: {
+                center.x = CGRectGetMinX(self.bounds) + circleRadius;
+                legendRect.size.width -= 2 * circleRadius;
+                legendRect.origin.x += 2 * circleRadius;
+                break;
+            }
+            case CSLegendPositionBottom: {
+                center.y = CGRectGetMinY(self.bounds) + circleRadius;
+                legendRect.size.height -= 2 * circleRadius;
+                legendRect.origin.y += 2 * circleRadius;
+                break;
+            }
+            case CSLegendPositionLeft: {
+                center.x = CGRectGetMaxX(self.bounds) - circleRadius;
+                legendRect.size.width -= 2 * circleRadius;
+                break;
+            }
+            default: {
+                NSAssert(false, @"The position has inproper value!");
+                break;
+            }
+        }
+        [_legendView setFrame:legendRect];
+    }
     CGRect circleRect = CGRectMake(center.x - _radius + _lineWidth / 2, center.y - _radius + _lineWidth / 2, _radius * 2 - _lineWidth, _radius * 2 - _lineWidth);
     CGFloat startAngle = radians(_startAngle);
     
@@ -157,6 +194,12 @@
     NSAssert(sumEquals1, @"The sum of percentages must be below or equal 1.f");
     BOOL angleIsBelow360 = (_startAngle <= 360);
     NSAssert(angleIsBelow360, @"Start angle can be only <0, 360>");
+}
+
+#pragma mark - CSLegendViewDelegate
+
+- (CGFloat)csLegendViewRequiresChartHeight:(CSLegendView *)csLegendView {
+    return _radius * 2 + _lineWidth;
 }
 
 @end

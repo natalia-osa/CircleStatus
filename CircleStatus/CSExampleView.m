@@ -13,9 +13,10 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setBackgroundColor:[UIColor blueColor]];
+        [self setBackgroundColor:[UIColor whiteColor]];
         
         _csView = [[CSView alloc] init];
+        [_csView setBackgroundColor:[UIColor darkGrayColor]];
         [self addSubview:_csView];
     }
     return self;
@@ -25,7 +26,9 @@
     [super layoutSubviews];
     
     CGRect bounds = self.bounds;
-    CGSize csSize = CGSizeMake(100.f, 100.f);
+    CGSize csSize = CGSizeMake(200.f, 100.f); // chart size
+    csSize.height = [_csView.legendView heightForChartSize:csSize]; // chart size with legendView
+    
     [_csView setFrame:CGRectIntegral(CGRectMake(CGRectGetMidX(bounds) - (csSize.width / 2), CGRectGetMidY(bounds) - (csSize.height / 2), csSize.width, csSize.height))];
 }
 

@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		642A46B9194988D60073D8E5 /* CSLegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A46B8194988D60073D8E5 /* CSLegendView.m */; };
+		642A46BC1949898F0073D8E5 /* CSPercentageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A46BB1949898F0073D8E5 /* CSPercentageColor.m */; };
+		642A46C11949A5C70073D8E5 /* CSLegendPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A46C01949A5C70073D8E5 /* CSLegendPair.m */; };
+		642A46C51949AB6E0073D8E5 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A46C41949AB6E0073D8E5 /* NSString+Size.m */; };
+		645E83B6194AE98500CBCBA9 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83B5194AE98500CBCBA9 /* CSAppDelegate.m */; };
 		645F4E9719472315007D3B08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9619472315007D3B08 /* Foundation.framework */; };
 		645F4E9919472315007D3B08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9819472315007D3B08 /* CoreGraphics.framework */; };
 		645F4E9B19472315007D3B08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9A19472315007D3B08 /* UIKit.framework */; };
 		645F4EA119472315007D3B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645F4E9F19472315007D3B08 /* InfoPlist.strings */; };
 		645F4EA319472315007D3B08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EA219472315007D3B08 /* main.m */; };
-		645F4EA719472315007D3B08 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EA619472315007D3B08 /* CSAppDelegate.m */; };
 		645F4EAD19472315007D3B08 /* CSExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EAC19472315007D3B08 /* CSExampleViewController.m */; };
 		645F4EAF19472315007D3B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EAE19472315007D3B08 /* Images.xcassets */; };
 		645F4EB619472315007D3B08 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4EB519472315007D3B08 /* XCTest.framework */; };
@@ -35,6 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		642A46B7194988D60073D8E5 /* CSLegendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLegendView.h; sourceTree = "<group>"; };
+		642A46B8194988D60073D8E5 /* CSLegendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLegendView.m; sourceTree = "<group>"; };
+		642A46BA1949898F0073D8E5 /* CSPercentageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPercentageColor.h; sourceTree = "<group>"; };
+		642A46BB1949898F0073D8E5 /* CSPercentageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPercentageColor.m; sourceTree = "<group>"; };
+		642A46BF1949A5C70073D8E5 /* CSLegendPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLegendPair.h; sourceTree = "<group>"; };
+		642A46C01949A5C70073D8E5 /* CSLegendPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLegendPair.m; sourceTree = "<group>"; };
+		642A46C31949AB6E0073D8E5 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		642A46C41949AB6E0073D8E5 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		645E83B4194AE98500CBCBA9 /* CSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAppDelegate.h; sourceTree = "<group>"; };
+		645E83B5194AE98500CBCBA9 /* CSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAppDelegate.m; sourceTree = "<group>"; };
 		645F4E9319472315007D3B08 /* CircleStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645F4E9619472315007D3B08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		645F4E9819472315007D3B08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -43,8 +57,6 @@
 		645F4EA019472315007D3B08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		645F4EA219472315007D3B08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		645F4EA419472315007D3B08 /* CircleStatus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircleStatus-Prefix.pch"; sourceTree = "<group>"; };
-		645F4EA519472315007D3B08 /* CSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAppDelegate.h; sourceTree = "<group>"; };
-		645F4EA619472315007D3B08 /* CSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAppDelegate.m; sourceTree = "<group>"; };
 		645F4EAB19472315007D3B08 /* CSExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSExampleViewController.h; sourceTree = "<group>"; };
 		645F4EAC19472315007D3B08 /* CSExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSExampleViewController.m; sourceTree = "<group>"; };
 		645F4EAE19472315007D3B08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -83,6 +95,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		642A46BD19498C0A0073D8E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				642A46BA1949898F0073D8E5 /* CSPercentageColor.h */,
+				642A46BB1949898F0073D8E5 /* CSPercentageColor.m */,
+				642A46BF1949A5C70073D8E5 /* CSLegendPair.h */,
+				642A46C01949A5C70073D8E5 /* CSLegendPair.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		642A46BE19498C140073D8E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				645F4ECB194723D0007D3B08 /* CSView.h */,
+				645F4ECC194723D0007D3B08 /* CSView.m */,
+				642A46B7194988D60073D8E5 /* CSLegendView.h */,
+				642A46B8194988D60073D8E5 /* CSLegendView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		642A46C21949AB5A0073D8E5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				642A46C31949AB6E0073D8E5 /* NSString+Size.h */,
+				642A46C41949AB6E0073D8E5 /* NSString+Size.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		645F4E8A19472315007D3B08 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +159,8 @@
 		645F4E9C19472315007D3B08 /* CircleStatus */ = {
 			isa = PBXGroup;
 			children = (
-				645F4EA519472315007D3B08 /* CSAppDelegate.h */,
-				645F4EA619472315007D3B08 /* CSAppDelegate.m */,
+				645E83B4194AE98500CBCBA9 /* CSAppDelegate.h */,
+				645E83B5194AE98500CBCBA9 /* CSAppDelegate.m */,
 				645F4ECF19473250007D3B08 /* Example */,
 				645F4ED019473256007D3B08 /* CircleStatus */,
 				645F4ECE19473242007D3B08 /* Resources */,
@@ -177,8 +220,9 @@
 		645F4ED019473256007D3B08 /* CircleStatus */ = {
 			isa = PBXGroup;
 			children = (
-				645F4ECB194723D0007D3B08 /* CSView.h */,
-				645F4ECC194723D0007D3B08 /* CSView.m */,
+				642A46BE19498C140073D8E5 /* Views */,
+				642A46BD19498C0A0073D8E5 /* Models */,
+				642A46C21949AB5A0073D8E5 /* Categories */,
 			);
 			name = CircleStatus;
 			sourceTree = "<group>";
@@ -281,10 +325,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				645F4ECD194723D0007D3B08 /* CSView.m in Sources */,
-				645F4EA719472315007D3B08 /* CSAppDelegate.m in Sources */,
+				642A46C51949AB6E0073D8E5 /* NSString+Size.m in Sources */,
+				642A46C11949A5C70073D8E5 /* CSLegendPair.m in Sources */,
 				645F4EA319472315007D3B08 /* main.m in Sources */,
+				642A46BC1949898F0073D8E5 /* CSPercentageColor.m in Sources */,
+				642A46B9194988D60073D8E5 /* CSLegendView.m in Sources */,
 				6496AABA1948409F00D4A4A8 /* CSExampleView.m in Sources */,
 				645F4EAD19472315007D3B08 /* CSExampleViewController.m in Sources */,
+				645E83B6194AE98500CBCBA9 /* CSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -390,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
