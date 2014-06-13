@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		642A46B9194988D60073D8E5 /* CSLegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A46B8194988D60073D8E5 /* CSLegendView.m */; };
-		642A46BC1949898F0073D8E5 /* CSPercentageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A46BB1949898F0073D8E5 /* CSPercentageColor.m */; };
-		642A46C11949A5C70073D8E5 /* CSLegendPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A46C01949A5C70073D8E5 /* CSLegendPair.m */; };
-		642A46C51949AB6E0073D8E5 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 642A46C41949AB6E0073D8E5 /* NSString+Size.m */; };
-		645E83B6194AE98500CBCBA9 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83B5194AE98500CBCBA9 /* CSAppDelegate.m */; };
+		645E83B9194AF8FF00CBCBA9 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83B8194AF8FF00CBCBA9 /* CSAppDelegate.m */; };
+		645E83BE194AF91500CBCBA9 /* CSExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83BB194AF91500CBCBA9 /* CSExampleView.m */; };
+		645E83BF194AF91500CBCBA9 /* CSExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83BD194AF91500CBCBA9 /* CSExampleViewController.m */; };
+		645E83C2194AF94400CBCBA9 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83C1194AF94400CBCBA9 /* NSString+Size.m */; };
+		645E83C7194AF95100CBCBA9 /* CSLegendPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83C4194AF95100CBCBA9 /* CSLegendPair.m */; };
+		645E83C8194AF95100CBCBA9 /* CSPercentageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83C6194AF95100CBCBA9 /* CSPercentageColor.m */; };
+		645E83CB194AF96300CBCBA9 /* CSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83CA194AF96300CBCBA9 /* CSView.m */; };
+		645E83CE194AF96B00CBCBA9 /* CSLegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83CD194AF96B00CBCBA9 /* CSLegendView.m */; };
 		645F4E9719472315007D3B08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9619472315007D3B08 /* Foundation.framework */; };
 		645F4E9919472315007D3B08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9819472315007D3B08 /* CoreGraphics.framework */; };
 		645F4E9B19472315007D3B08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9A19472315007D3B08 /* UIKit.framework */; };
 		645F4EA119472315007D3B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645F4E9F19472315007D3B08 /* InfoPlist.strings */; };
 		645F4EA319472315007D3B08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EA219472315007D3B08 /* main.m */; };
-		645F4EAD19472315007D3B08 /* CSExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EAC19472315007D3B08 /* CSExampleViewController.m */; };
 		645F4EAF19472315007D3B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EAE19472315007D3B08 /* Images.xcassets */; };
 		645F4EB619472315007D3B08 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4EB519472315007D3B08 /* XCTest.framework */; };
 		645F4EB719472315007D3B08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9619472315007D3B08 /* Foundation.framework */; };
 		645F4EB819472315007D3B08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9A19472315007D3B08 /* UIKit.framework */; };
 		645F4EC019472315007D3B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EBE19472315007D3B08 /* InfoPlist.strings */; };
 		645F4EC219472315007D3B08 /* CircleStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EC119472315007D3B08 /* CircleStatusTests.m */; };
-		645F4ECD194723D0007D3B08 /* CSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4ECC194723D0007D3B08 /* CSView.m */; };
-		6496AABA1948409F00D4A4A8 /* CSExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6496AAB91948409F00D4A4A8 /* CSExampleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +39,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		642A46B7194988D60073D8E5 /* CSLegendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLegendView.h; sourceTree = "<group>"; };
-		642A46B8194988D60073D8E5 /* CSLegendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLegendView.m; sourceTree = "<group>"; };
-		642A46BA1949898F0073D8E5 /* CSPercentageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPercentageColor.h; sourceTree = "<group>"; };
-		642A46BB1949898F0073D8E5 /* CSPercentageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPercentageColor.m; sourceTree = "<group>"; };
-		642A46BF1949A5C70073D8E5 /* CSLegendPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLegendPair.h; sourceTree = "<group>"; };
-		642A46C01949A5C70073D8E5 /* CSLegendPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLegendPair.m; sourceTree = "<group>"; };
-		642A46C31949AB6E0073D8E5 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
-		642A46C41949AB6E0073D8E5 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
-		645E83B4194AE98500CBCBA9 /* CSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAppDelegate.h; sourceTree = "<group>"; };
-		645E83B5194AE98500CBCBA9 /* CSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAppDelegate.m; sourceTree = "<group>"; };
+		645E83B7194AF8FF00CBCBA9 /* CSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSAppDelegate.h; path = Example/CSAppDelegate.h; sourceTree = "<group>"; };
+		645E83B8194AF8FF00CBCBA9 /* CSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSAppDelegate.m; path = Example/CSAppDelegate.m; sourceTree = "<group>"; };
+		645E83BA194AF91500CBCBA9 /* CSExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSExampleView.h; path = Example/CSExampleView.h; sourceTree = "<group>"; };
+		645E83BB194AF91500CBCBA9 /* CSExampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSExampleView.m; path = Example/CSExampleView.m; sourceTree = "<group>"; };
+		645E83BC194AF91500CBCBA9 /* CSExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSExampleViewController.h; path = Example/CSExampleViewController.h; sourceTree = "<group>"; };
+		645E83BD194AF91500CBCBA9 /* CSExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSExampleViewController.m; path = Example/CSExampleViewController.m; sourceTree = "<group>"; };
+		645E83C0194AF94400CBCBA9 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Size.h"; path = "CircleStatus/NSString+Size.h"; sourceTree = "<group>"; };
+		645E83C1194AF94400CBCBA9 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Size.m"; path = "CircleStatus/NSString+Size.m"; sourceTree = "<group>"; };
+		645E83C3194AF95100CBCBA9 /* CSLegendPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLegendPair.h; path = CircleStatus/CSLegendPair.h; sourceTree = "<group>"; };
+		645E83C4194AF95100CBCBA9 /* CSLegendPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLegendPair.m; path = CircleStatus/CSLegendPair.m; sourceTree = "<group>"; };
+		645E83C5194AF95100CBCBA9 /* CSPercentageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSPercentageColor.h; path = CircleStatus/CSPercentageColor.h; sourceTree = "<group>"; };
+		645E83C6194AF95100CBCBA9 /* CSPercentageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSPercentageColor.m; path = CircleStatus/CSPercentageColor.m; sourceTree = "<group>"; };
+		645E83C9194AF96300CBCBA9 /* CSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSView.h; path = CircleStatus/CSView.h; sourceTree = "<group>"; };
+		645E83CA194AF96300CBCBA9 /* CSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSView.m; path = CircleStatus/CSView.m; sourceTree = "<group>"; };
+		645E83CC194AF96B00CBCBA9 /* CSLegendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLegendView.h; path = CircleStatus/CSLegendView.h; sourceTree = "<group>"; };
+		645E83CD194AF96B00CBCBA9 /* CSLegendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLegendView.m; path = CircleStatus/CSLegendView.m; sourceTree = "<group>"; };
 		645F4E9319472315007D3B08 /* CircleStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645F4E9619472315007D3B08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		645F4E9819472315007D3B08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,18 +63,12 @@
 		645F4EA019472315007D3B08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		645F4EA219472315007D3B08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		645F4EA419472315007D3B08 /* CircleStatus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircleStatus-Prefix.pch"; sourceTree = "<group>"; };
-		645F4EAB19472315007D3B08 /* CSExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSExampleViewController.h; sourceTree = "<group>"; };
-		645F4EAC19472315007D3B08 /* CSExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSExampleViewController.m; sourceTree = "<group>"; };
 		645F4EAE19472315007D3B08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		645F4EB419472315007D3B08 /* CircleStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		645F4EB519472315007D3B08 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		645F4EBD19472315007D3B08 /* CircleStatusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircleStatusTests-Info.plist"; sourceTree = "<group>"; };
 		645F4EBF19472315007D3B08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		645F4EC119472315007D3B08 /* CircleStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleStatusTests.m; sourceTree = "<group>"; };
-		645F4ECB194723D0007D3B08 /* CSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSView.h; sourceTree = "<group>"; };
-		645F4ECC194723D0007D3B08 /* CSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSView.m; sourceTree = "<group>"; };
-		6496AAB81948409F00D4A4A8 /* CSExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSExampleView.h; sourceTree = "<group>"; };
-		6496AAB91948409F00D4A4A8 /* CSExampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSExampleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +98,10 @@
 		642A46BD19498C0A0073D8E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				642A46BA1949898F0073D8E5 /* CSPercentageColor.h */,
-				642A46BB1949898F0073D8E5 /* CSPercentageColor.m */,
-				642A46BF1949A5C70073D8E5 /* CSLegendPair.h */,
-				642A46C01949A5C70073D8E5 /* CSLegendPair.m */,
+				645E83C5194AF95100CBCBA9 /* CSPercentageColor.h */,
+				645E83C6194AF95100CBCBA9 /* CSPercentageColor.m */,
+				645E83C3194AF95100CBCBA9 /* CSLegendPair.h */,
+				645E83C4194AF95100CBCBA9 /* CSLegendPair.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -109,10 +109,10 @@
 		642A46BE19498C140073D8E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				645F4ECB194723D0007D3B08 /* CSView.h */,
-				645F4ECC194723D0007D3B08 /* CSView.m */,
-				642A46B7194988D60073D8E5 /* CSLegendView.h */,
-				642A46B8194988D60073D8E5 /* CSLegendView.m */,
+				645E83C9194AF96300CBCBA9 /* CSView.h */,
+				645E83CA194AF96300CBCBA9 /* CSView.m */,
+				645E83CC194AF96B00CBCBA9 /* CSLegendView.h */,
+				645E83CD194AF96B00CBCBA9 /* CSLegendView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -120,8 +120,8 @@
 		642A46C21949AB5A0073D8E5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				642A46C31949AB6E0073D8E5 /* NSString+Size.h */,
-				642A46C41949AB6E0073D8E5 /* NSString+Size.m */,
+				645E83C0194AF94400CBCBA9 /* NSString+Size.h */,
+				645E83C1194AF94400CBCBA9 /* NSString+Size.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -159,8 +159,8 @@
 		645F4E9C19472315007D3B08 /* CircleStatus */ = {
 			isa = PBXGroup;
 			children = (
-				645E83B4194AE98500CBCBA9 /* CSAppDelegate.h */,
-				645E83B5194AE98500CBCBA9 /* CSAppDelegate.m */,
+				645E83B7194AF8FF00CBCBA9 /* CSAppDelegate.h */,
+				645E83B8194AF8FF00CBCBA9 /* CSAppDelegate.m */,
 				645F4ECF19473250007D3B08 /* Example */,
 				645F4ED019473256007D3B08 /* CircleStatus */,
 				645F4ECE19473242007D3B08 /* Resources */,
@@ -209,10 +209,10 @@
 		645F4ECF19473250007D3B08 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				645F4EAB19472315007D3B08 /* CSExampleViewController.h */,
-				645F4EAC19472315007D3B08 /* CSExampleViewController.m */,
-				6496AAB81948409F00D4A4A8 /* CSExampleView.h */,
-				6496AAB91948409F00D4A4A8 /* CSExampleView.m */,
+				645E83BC194AF91500CBCBA9 /* CSExampleViewController.h */,
+				645E83BD194AF91500CBCBA9 /* CSExampleViewController.m */,
+				645E83BA194AF91500CBCBA9 /* CSExampleView.h */,
+				645E83BB194AF91500CBCBA9 /* CSExampleView.m */,
 			);
 			name = Example;
 			sourceTree = "<group>";
@@ -324,15 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				645F4ECD194723D0007D3B08 /* CSView.m in Sources */,
-				642A46C51949AB6E0073D8E5 /* NSString+Size.m in Sources */,
-				642A46C11949A5C70073D8E5 /* CSLegendPair.m in Sources */,
+				645E83BF194AF91500CBCBA9 /* CSExampleViewController.m in Sources */,
+				645E83C8194AF95100CBCBA9 /* CSPercentageColor.m in Sources */,
+				645E83C7194AF95100CBCBA9 /* CSLegendPair.m in Sources */,
 				645F4EA319472315007D3B08 /* main.m in Sources */,
-				642A46BC1949898F0073D8E5 /* CSPercentageColor.m in Sources */,
-				642A46B9194988D60073D8E5 /* CSLegendView.m in Sources */,
-				6496AABA1948409F00D4A4A8 /* CSExampleView.m in Sources */,
-				645F4EAD19472315007D3B08 /* CSExampleViewController.m in Sources */,
-				645E83B6194AE98500CBCBA9 /* CSAppDelegate.m in Sources */,
+				645E83CB194AF96300CBCBA9 /* CSView.m in Sources */,
+				645E83C2194AF94400CBCBA9 /* NSString+Size.m in Sources */,
+				645E83CE194AF96B00CBCBA9 /* CSLegendView.m in Sources */,
+				645E83B9194AF8FF00CBCBA9 /* CSAppDelegate.m in Sources */,
+				645E83BE194AF91500CBCBA9 /* CSExampleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
