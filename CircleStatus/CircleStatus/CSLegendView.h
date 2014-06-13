@@ -24,13 +24,16 @@ typedef NS_ENUM(NSUInteger, CSLegendPosition) {
  Protocol used by CSView.
  **/
 @protocol CSLegendViewDelegate <NSObject>
+
 - (CGFloat)csLegendViewRequiresChartHeight:(CSLegendView *)csLegendView;
+
 @end
 
 /**
  View which shows dots, percentage and name of each of values. Keep in mind, that you have to [csViewProperty setBackgroundColor:[UIColor clearColo]] to get clear background - otherwise it's white.
  **/
 @interface CSLegendView : UIView
+
 @property (nonatomic, weak) id<CSLegendViewDelegate> delegate;
 
 /**

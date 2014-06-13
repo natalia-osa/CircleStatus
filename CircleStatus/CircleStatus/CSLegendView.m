@@ -12,7 +12,9 @@
 #import "NSString+Size.h"
 
 @interface CSLegendView()
+
 @property (nonatomic, strong) NSMutableArray *legendPairs;
+
 @end
 
 @implementation CSLegendView
@@ -23,6 +25,7 @@
     if (self = [super initWithCoder:aDecoder]) {
         [self commonInit];
     }
+    
     return self;
 }
 
@@ -30,6 +33,7 @@
     if (self = [super initWithFrame:frame]) {
         [self commonInit];
     }
+    
     return self;
 }
 
@@ -108,6 +112,7 @@
     [label setBackgroundColor:[UIColor clearColor]];
     [label setFont:[UIFont systemFontOfSize:10.f]];
     [label setText:text];
+    
     return label;
 }
 
@@ -115,10 +120,11 @@
     UIView *view = [[UIView alloc] init];
     [view setBackgroundColor:color];
     [view.layer setCornerRadius:MIN(_dotSize.width, _dotSize.height) / 2.f];
+    
     return view;
 }
 
-- (CGFloat)previousY:(CGFloat)previousY item:(CSLegendPair *)legendPair colorFrame:(CGRect*)colorFrame labelFrame:(CGRect*)labelFrame inRect:(CGRect)originRect {
+- (CGFloat)previousY:(CGFloat)previousY item:(CSLegendPair *)legendPair colorFrame:(CGRect *)colorFrame labelFrame:(CGRect *)labelFrame inRect:(CGRect)originRect {
     CGFloat margin = 3.f;
     
     CGSize labelSize = [legendPair.label.text ios67sizeWithFont:legendPair.label.font
@@ -134,7 +140,10 @@
                              previousY,
                              labelSize.width,
                              labelSize.height);
+    
+    //##OBJCLEAN_SKIP##
     return CGRectGetMaxY(*labelFrame) + margin;
+    //##OBJCLEAN_ENDSKIP##
 }
 
 - (CGFloat)heightForChartSize:(CGSize)size {

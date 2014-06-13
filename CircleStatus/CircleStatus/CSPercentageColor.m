@@ -17,6 +17,7 @@
         _color = color;
         _percentage = percentage;
     }
+    
     return self;
 }
 

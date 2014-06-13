@@ -23,6 +23,7 @@
     if (self = [super initWithCoder:aDecoder]) {
         [self commonInit];
     }
+    
     return self;
 }
 
@@ -30,6 +31,7 @@
     if (self = [super initWithFrame:frame]) {
         [self commonInit];
     }
+    
     return self;
 }
 
@@ -105,7 +107,7 @@
 
 - (void)drawCircle {
     // setup context
-    CGContextRef context= UIGraphicsGetCurrentContext();
+    CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClearRect(context, self.bounds);
     
     // draw background color
@@ -161,7 +163,7 @@
     
     // set frame for inside objects
     [_textLabel setFrame:CGRectIntegral(circleRect)];
-    [_imageView setFrame:CGRectIntegral(CGRectInset(circleRect, _radius/2, _radius/2))];
+    [_imageView setFrame:CGRectIntegral(CGRectInset(circleRect, _radius / 2, _radius / 2))];
     
     CGContextSetLineWidth(context, _lineWidth);
     // draw each part of outer circle

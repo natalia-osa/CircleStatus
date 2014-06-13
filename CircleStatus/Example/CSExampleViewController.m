@@ -11,7 +11,9 @@
 #import "CSView.h"
 
 @interface CSExampleViewController ()
+
 @property (nonatomic, weak) CSExampleView *csExampleView;
+
 @end
 
 @implementation CSExampleViewController
@@ -46,11 +48,11 @@
     [_csExampleView.csView setStartAngle:15];
     [_csExampleView.csView setLineWidth:10];
     [_csExampleView.csView setRadius:50.f];
-    [_csExampleView.csView.legendView setLegendPosition:CSLegendPositionBottom];
-    [_csExampleView.csView.legendView setBackgroundColor:[UIColor redColor]];
-    [_csExampleView.csView.legendView.layer setCornerRadius:2.f];
-    [_csExampleView.csView.legendView.layer setBorderColor:[UIColor blackColor].CGColor];
-    [_csExampleView.csView.legendView.layer setBorderWidth:1.f];
+    [_csExampleView.csView.legendView setLegendPosition:CSLegendPositionRight];
+//    [_csExampleView.csView.legendView setBackgroundColor:[UIColor redColor]];
+//    [_csExampleView.csView.legendView.layer setCornerRadius:2.f];
+//    [_csExampleView.csView.legendView.layer setBorderColor:[UIColor blackColor].CGColor];
+//    [_csExampleView.csView.legendView.layer setBorderWidth:1.f];
     [self.view setNeedsLayout];
 }
 

@@ -15,6 +15,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:[[CSExampleViewController alloc] init]];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							

@@ -13,7 +13,7 @@
 /**
  Use to draw circle with selected properties in the middle of the view.
  **/
-@interface CSView : UIView <CSLegendViewDelegate>
+@interface CSView : UIView<CSLegendViewDelegate>
 
 /**
  By default 1 gray color. Please note that total percentages from this array must give 1.f or less in total. If it is less, in the end of the circle we'll have 'clear' space.
