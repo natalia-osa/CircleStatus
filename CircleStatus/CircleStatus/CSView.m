@@ -184,18 +184,17 @@
 - (void)validateData {
     CGFloat totalPercent = 0.f;
     for (CSPercentageColor *percColor in _percentageColorArray) {
-        BOOL isPercentageColorClass = [percColor isKindOfClass:[CSPercentageColor class]];
-        NSAssert(isPercentageColorClass, @"All data in percentageColorArray must be CSPercentageColor instance");
-        
-        BOOL isBetween0And1 = (percColor.percentage > 0.f || percColor.percentage < 1.f);
-        NSAssert(isBetween0And1, @"Percentage must be between (0.f; 1.f)");
+        // isPercentageColorClass
+        NSAssert([percColor isKindOfClass:[CSPercentageColor class]], @"All data in percentageColorArray must be CSPercentageColor instance");
+        // isBetween0And1
+        NSAssert((percColor.percentage > 0.f || percColor.percentage < 1.f), @"Percentage must be between (0.f; 1.f)");
         
         totalPercent += percColor.percentage;
     }
-    BOOL sumEquals1 = floatEqual(1.f, totalPercent) || totalPercent < 1.f;
-    NSAssert(sumEquals1, @"The sum of percentages must be below or equal 1.f");
-    BOOL angleIsBelow360 = (_startAngle <= 360);
-    NSAssert(angleIsBelow360, @"Start angle can be only <0, 360>");
+    // sumEquals1
+    NSAssert((floatEqual(1.f, totalPercent) || totalPercent < 1.f), @"The sum of percentages must be below or equal 1.f");
+    // angleIsBelow360
+    NSAssert((_startAngle <= 360), @"Start angle can be only <0, 360>");
 }
 
 #pragma mark - CSLegendViewDelegate

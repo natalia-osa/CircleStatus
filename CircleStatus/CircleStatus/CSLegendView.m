@@ -148,7 +148,7 @@
 
 - (CGFloat)heightForChartSize:(CGSize)size {
     // Chart height
-    CGFloat chartHeight;
+    CGFloat chartHeight = -1.f;
     if (_delegate && [_delegate respondsToSelector:@selector(csLegendViewRequiresChartHeight:)]) {
         chartHeight = [_delegate csLegendViewRequiresChartHeight:self];
     }
