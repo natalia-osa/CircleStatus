@@ -28,7 +28,7 @@ You can do much more than this ^^
 #### Installation with CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking).
 ```ruby
-pod "CircleStatus", "~> 1.0"
+pod "CircleStatus", "~> 1.1"
 ```
 #### Submodule
 In your projects git foler type:
@@ -37,9 +37,9 @@ git submodule init
 git submodule add --copy link to the repo--
 git submodule update
 ```
-Copy CSView.h and CSView.m to your project.
+Copy all files from CircleStatus/CircleStatus folder.
 #### Just download & attach
-This is strongly disadvised as you won't be able to see code updates. Clone or download the source, copy CSView.h and CSView.m to your project.
+This is strongly disadvised as you won't be able to see code updates. Clone or download the source, copy all files from CircleStatus/CircleStatus folder.
 
 ## Implementation:
 Clone and see the demo for more examples about implementation. You can add the view via Storyboard or using code:
