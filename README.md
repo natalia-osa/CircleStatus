@@ -31,7 +31,7 @@ You can do much more than this ^^
 pod "CircleStatus", "~> 1.1.1"
 ```
 #### Submodule
-In your projects git foler type:
+In your projects git folder type:
 ```bash
 git submodule init
 git submodule add --copy link to the repo--
