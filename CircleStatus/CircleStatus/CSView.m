@@ -38,6 +38,7 @@
 - (void)commonInit {
     [self setOpaque:NO];
     [self setAutoresizesSubviews:YES];
+    [self setContentMode:UIViewContentModeRedraw];
     
     _lineWidth = 10.f;
     _startAngle = 270.f;
