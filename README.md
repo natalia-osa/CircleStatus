@@ -28,7 +28,7 @@ You can do much more than this ^^
 #### Installation with CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking).
 ```ruby
-pod "CircleStatus", "~> 1.1.2"
+pod "CircleStatus", "~> 1.1.3"
 ```
 #### Submodule
 In your projects git folder type:
