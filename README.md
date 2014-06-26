@@ -90,3 +90,15 @@ Clone and see the demo for more examples about implementation. You can add the v
     [_csExampleView.csView.legendView setLegendPosition:CSLegendPositionRight];
 }
 ```
+## Author
+
+Natalia Osiecka, natalia.osa@appunite.com
+AppUnite.com
+
+## License
+
+Available under the Apache 2.0 license. See the LICENSE file for more info.
+
+## Requirements
+
+Requires Xcode 5, targeting either iOS 5.0 or higher
