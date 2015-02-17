@@ -1,3 +1,6 @@
+[![Version](https://cocoapod-badges.herokuapp.com/v/CircleStatus/badge.png)](http://cocoadocs.org/docsets/CircleStatus) 
+[![Platform](https://cocoapod-badges.herokuapp.com/p/CircleStatus/badge.png)](http://cocoadocs.org/docsets/CircleStatus) 
+
 <p align="center" ><img src="https://raw.github.com/natalia-osa/CircleStatus/master/ReadmeImages/outlook1.png" alt="CircleStatus" title="CircleStatus" height="480"></p>
 
 
