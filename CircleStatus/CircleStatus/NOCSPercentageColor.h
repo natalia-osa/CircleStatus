@@ -1,24 +1,24 @@
 //
-//  CSPercentageColor.h
+//  NOCSPercentageColor.h
 //  CircleStatus
 //
 //  Created by Natalia Osiecka on 12.6.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /// Model class to fill percentageColorArray. Please note that the order is important.
-@interface CSPercentageColor : NSObject
+@interface NOCSPercentageColor : NSObject
 
 /// Title to show in legend
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic) NSString *title;
 
 /// Color to be drawn.
-@property (nonatomic, strong) UIColor *color;
+@property (nonatomic) UIColor *color;
 
 /// It will be recalculated to draw given color with angle. 1.f is 2PI. Please note, that the value must be (0.f; 1.f).
-@property (nonatomic, assign) CGFloat percentage;
+@property (nonatomic) CGFloat percentage;
 
 /**
  * Common initializer.

@@ -1,9 +1,9 @@
 //
-//  CSLegendView.h
+//  NOCSLegendView.h
 //  CircleStatus
 //
 //  Created by Natalia Osiecka on 12.6.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,37 +16,37 @@ typedef NS_ENUM(NSUInteger, CSLegendPosition) {
     CSLegendPositionLeft
 };
 
-@class CSLegendView, CSLegendViewDelegate;
+@class NOCSLegendView, CSLegendViewDelegate;
 
 /// Protocol used by CSView.
-@protocol CSLegendViewDelegate <NSObject>
+@protocol NOCSLegendViewDelegate <NSObject>
 
 /**
  * Method implemented by CSView, usually you don't want to mess with this. Requires information about chart height.
  * @param csLegendView Usually self, informs about sender.
  * @return Height reserved for the chart.
  */
-- (CGFloat)csLegendViewRequiresChartHeight:(CSLegendView *)csLegendView;
+- (CGFloat)csLegendViewRequiresChartHeight:(NOCSLegendView *)csLegendView;
 
 @end
 
 /// View which shows dots, percentage and name of each of values. Keep in mind, that you have to [csViewProperty setBackgroundColor:[UIColor clearColor]] to get clear background - otherwise it's white.
-@interface CSLegendView : UIView
+@interface NOCSLegendView : UIView
 
 /// Delegate implemented by CSView
-@property (nonatomic, weak) id<CSLegendViewDelegate> delegate;
+@property (nonatomic, weak) id<NOCSLegendViewDelegate> delegate;
 
 /// The order is color - percentage - title. By default shows the percentage (YES).
-@property (nonatomic, assign) BOOL showPercentage;
+@property (nonatomic) BOOL showPercentage;
 
 /// Change position of legend. Keep in mind the size of the view. Default CSLegendPositionRight.
-@property (nonatomic, assign) CSLegendPosition legendPosition;
+@property (nonatomic) CSLegendPosition legendPosition;
 
 /// Overloading this may cause legend to be incompatible with CSView. CSView is handling this variable.
-@property (nonatomic, strong) NSArray *percentageColorArray;
+@property (nonatomic) NSArray *percentageColorArray;
 
 /// Size of coloured dot (view) before text description.
-@property (nonatomic, assign) CGSize dotSize;
+@property (nonatomic) CGSize dotSize;
 
 /**
  * Advanced:
@@ -55,17 +55,23 @@ typedef NS_ENUM(NSUInteger, CSLegendPosition) {
 - (void)commonInit;
 
 /**
- * Return your own customized label.
+ *  Convenience method to return customized label. Can be overloaded - return your custom label.
+ *  @param text Text to show on the label.
+ *  @return The customized label.
  */
 - (UILabel *)customizedLabelWithText:(NSString *)text;
 
 /**
- * Return your own view if dot isn't what you expect before text description.
+ *  Convenience method to return colored dot view. Can be overloaded - return your custom view, which should appear before legend text.
+ *  @param color Color to fill the view with.
+ *  @return The customized legend dot view.
  */
 - (UIView *)customizedColorDotWithColor:(UIColor *)color;
 
 /**
- * Calculates the total height of legend and chart.
+ *  Calculates the total height of legend and chart. Can be overloaded - return required height for the legend.
+ *  @param size Chart size.
+ *  @return The legend height for given chart size.
  */
 - (CGFloat)heightForChartSize:(CGSize)size;
 

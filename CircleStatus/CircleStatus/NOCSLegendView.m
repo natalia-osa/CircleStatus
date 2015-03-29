@@ -1,23 +1,24 @@
 //
-//  CSLegendView.m
+//  NOCSLegendView.m
 //  CircleStatus
 //
 //  Created by Natalia Osiecka on 12.6.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
-#import "CSLegendView.h"
-#import "CSLegendPair.h"
-#import "CSPercentageColor.h"
-#import "NSString+Size.h"
+#import "NOCSLegendView.h"
+#import "NOCSLegendPair.h"
+#import "NOCSPercentageColor.h"
+#import <NOCategories/NSString+NOCSize.h>
+#import <NOCategories/NOCMacros.h>
 
-@interface CSLegendView()
+@interface NOCSLegendView()
 
-@property (nonatomic, strong) NSMutableArray *legendPairs;
+@property (nonatomic) NSMutableArray *legendPairs;
 
 @end
 
-@implementation CSLegendView
+@implementation NOCSLegendView
 
 #pragma mark - Inits
 
@@ -63,32 +64,36 @@
 
 - (void)redrawSubviews {
     // get rid of previous views
-    if (_legendPairs) {
-        for (CSLegendPair *legendPair in _legendPairs) {
+    if (self.legendPairs) {
+        for (NOCSLegendPair *legendPair in self.legendPairs) {
             [legendPair.colorDot removeFromSuperview];
             [legendPair.label removeFromSuperview];
         }
-        _legendPairs = nil;
+        self.legendPairs = nil;
     }
     
     // setup new environment
-    _legendPairs = [[NSMutableArray alloc] init];
+    self.legendPairs = [[NSMutableArray alloc] init];
     
     // add new views
-    for (CSPercentageColor *percentageColor in _percentageColorArray) {
-        NSString *labelString = _showPercentage ? [NSString stringWithFormat:@"~%d%% - %@", (int)(percentageColor.percentage * 100.f), percentageColor.title] : percentageColor.title;
-        UILabel *label = [self customizedLabelWithText:labelString];
-        [label setNumberOfLines:0.f];
-        [self addSubview:label];
-        
-        UIView *colorDot = [self customizedColorDotWithColor:percentageColor.color];
-        [self addSubview:colorDot];
-        
-        CSLegendPair *legendPair = [[CSLegendPair alloc] init];
-        legendPair.colorDot = colorDot;
-        legendPair.label = label;
-        [_legendPairs addObject:legendPair];
+    for (NOCSPercentageColor *percentageColor in self.percentageColorArray) {
+        [self redrawPercentageColor:percentageColor];
     }
+}
+
+- (void)redrawPercentageColor:(NOCSPercentageColor *)percentageColor {
+    NSString *labelString = self.showPercentage ? [NSString stringWithFormat:@"~%d%% - %@", (int)(percentageColor.percentage * 100.f), percentageColor.title] : percentageColor.title;
+    UILabel *label = [self customizedLabelWithText:labelString];
+    [label setNumberOfLines:0.f];
+    [self addSubview:label];
+    
+    UIView *colorDot = [self customizedColorDotWithColor:percentageColor.color];
+    [self addSubview:colorDot];
+    
+    NOCSLegendPair *legendPair = [[NOCSLegendPair alloc] init];
+    legendPair.colorDot = colorDot;
+    legendPair.label = label;
+    [self.legendPairs addObject:legendPair];
 }
 
 #pragma mark - Class methods
@@ -97,7 +102,7 @@
     [super layoutSubviews];
     
     CGFloat previousY = 0.f;
-    for (CSLegendPair *legendPair in _legendPairs) {
+    for (NOCSLegendPair *legendPair in self.legendPairs) {
         CGRect colorFrame; CGRect labelFrame;
         previousY = [self previousY:previousY item:legendPair colorFrame:&colorFrame labelFrame:&labelFrame inRect:self.bounds];
         [legendPair.colorDot setFrame:colorFrame];
@@ -119,23 +124,22 @@
 - (UIView *)customizedColorDotWithColor:(UIColor *)color {
     UIView *view = [[UIView alloc] init];
     [view setBackgroundColor:color];
-    [view.layer setCornerRadius:MIN(_dotSize.width, _dotSize.height) / 2.f];
+    [view.layer setCornerRadius:MIN(self.dotSize.width, self.dotSize.height) / 2.f];
     
     return view;
 }
 
-- (CGFloat)previousY:(CGFloat)previousY item:(CSLegendPair *)legendPair colorFrame:(CGRect *)colorFrame labelFrame:(CGRect *)labelFrame inRect:(CGRect)originRect {
+- (CGFloat)previousY:(CGFloat)previousY item:(NOCSLegendPair *)legendPair colorFrame:(CGRect *)colorFrame labelFrame:(CGRect *)labelFrame inRect:(CGRect)originRect {
     CGFloat margin = 3.f;
     
-    CGSize labelSize = [legendPair.label.text ios67sizeWithFont:legendPair.label.font
-                                              constrainedToSize:CGSizeMake(CGRectGetWidth(originRect) - _dotSize.width - margin * 2,
-                                                                           MAXFLOAT)];
-    CGFloat centerYAddValue = (labelSize.height - _dotSize.height) / 2.f;
-    labelSize.width = MIN(CGRectGetWidth(originRect) - _dotSize.width - margin, labelSize.width);
+    CGSize maxLabelSize = CGSizeMake(CGRectGetWidth(originRect) - self.dotSize.width - margin * 2, MAXFLOAT);
+    CGSize labelSize = [legendPair.label.text noc_backwardCompatibleSizeWithFont:legendPair.label.font constrainedToSize:maxLabelSize];
+    CGFloat centerYAddValue = (labelSize.height - self.dotSize.height) / 2.f;
+    labelSize.width = MIN(CGRectGetWidth(originRect) - self.dotSize.width - margin, labelSize.width);
     *colorFrame = CGRectMake(CGRectGetMinX(originRect) + margin,
-                             floorf(previousY + ((centerYAddValue > 0.f) ? centerYAddValue : 0.f)),
-                             _dotSize.width,
-                             _dotSize.height);
+                             noc_floorCGFloat(previousY + ((centerYAddValue > 0.f) ? centerYAddValue : 0.f)),
+                             self.dotSize.width,
+                             self.dotSize.height);
     *labelFrame = CGRectMake(CGRectGetMaxX(legendPair.colorDot.frame) + margin,
                              previousY,
                              labelSize.width,
@@ -149,8 +153,8 @@
 - (CGFloat)heightForChartSize:(CGSize)size {
     // Chart height
     CGFloat chartHeight = -1.f;
-    if (_delegate && [_delegate respondsToSelector:@selector(csLegendViewRequiresChartHeight:)]) {
-        chartHeight = [_delegate csLegendViewRequiresChartHeight:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(csLegendViewRequiresChartHeight:)]) {
+        chartHeight = [self.delegate csLegendViewRequiresChartHeight:self];
     }
     if (chartHeight <= 0) {
         chartHeight = MIN(size.width, size.height);
@@ -158,17 +162,16 @@
     
     // Total height of labels
     CGFloat labelsHeight = 0.f;
-    for (CSLegendPair *legendPair in _legendPairs) {
+    for (NOCSLegendPair *legendPair in self.legendPairs) {
         CGRect colorFrame; CGRect labelFrame;
-        CGRect boundsRect = CGRectMake(0.f, 0.f, (_legendPosition == CSLegendPositionTop || _legendPosition == CSLegendPositionBottom) ? size.width : size.width - chartHeight, size.height);
+        CGRect boundsRect = CGRectMake(0.f, 0.f, (self.legendPosition == CSLegendPositionTop || self.legendPosition == CSLegendPositionBottom) ? size.width : size.width - chartHeight, size.height);
         labelsHeight = [self previousY:labelsHeight item:legendPair colorFrame:&colorFrame labelFrame:&labelFrame inRect:boundsRect];
     }
     
     // If legend is above/below, we need to add legend to chart
-    if (_legendPosition == CSLegendPositionTop || _legendPosition == CSLegendPositionBottom) {
+    if (self.legendPosition == CSLegendPositionTop || self.legendPosition == CSLegendPositionBottom) {
         labelsHeight += chartHeight;
-    // Otherwise, lets pick up higher value
-    } else {
+    } else { // Otherwise, lets pick up higher value
         labelsHeight = MAX(labelsHeight, chartHeight);
     }
     

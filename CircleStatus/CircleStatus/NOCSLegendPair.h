@@ -1,20 +1,20 @@
 //
-//  CSLegendPair.h
+//  NOCSLegendPair.h
 //  CircleStatus
 //
 //  Created by Natalia Osiecka on 12.6.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /// Model class to keep reference to views inserted into CSLegendView.
-@interface CSLegendPair : NSObject
+@interface NOCSLegendPair : NSObject
 
 /// View containing coloured dot. You can swap this view using customizedColorDotWithColor: in CSLegendView.
-@property (nonatomic, strong) UIView *colorDot;
+@property (nonatomic) UIView *colorDot;
 
 /// View containing label describing coloured dot. You can swap this view using customizedLabelWithText: in CSLegendView.
-@property (nonatomic, strong) UILabel *label;
+@property (nonatomic) UILabel *label;
 
 @end

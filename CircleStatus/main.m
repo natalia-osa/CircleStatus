@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "CSAppDelegate.h"
+#import "NOCSAppDelegate.h"
 
 int main(int argc, char *argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([CSAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([NOCSAppDelegate class]));
     }
 }

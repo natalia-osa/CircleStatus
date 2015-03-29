@@ -1,14 +1,14 @@
 //
-//  CSPercentageColor.m
+//  NOCSPercentageColor.m
 //  CircleStatus
 //
 //  Created by Natalia Osiecka on 12.6.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
-#import "CSPercentageColor.h"
+#import "NOCSPercentageColor.h"
 
-@implementation CSPercentageColor
+@implementation NOCSPercentageColor
 
 - (instancetype)initWithTitle:(NSString *)title color:(UIColor *)color percentage:(CGFloat)percentage {
     self = [super init];
