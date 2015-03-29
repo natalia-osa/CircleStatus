@@ -27,6 +27,7 @@
 		645F4EC219472315007D3B08 /* CircleStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EC119472315007D3B08 /* CircleStatusTests.m */; };
 		916E754CC7DE415E9BA9B806 /* libPods-CircleStatusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3EC0A530E3281C3C32FA4 /* libPods-CircleStatusTests.a */; };
 		A7FB75AC1590E5404702BA66 /* libPods-CircleStatus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDA004ACB8B0BE2D2D36B71 /* libPods-CircleStatus.a */; };
+		F1E65AC59BB4EA1232DF40FD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E12C8CD00C5B6F227EE752 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15E12C8CD00C5B6F227EE752 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDA004ACB8B0BE2D2D36B71 /* libPods-CircleStatus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleStatus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		645E83B7194AF8FF00CBCBA9 /* NOCSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NOCSAppDelegate.h; path = Example/NOCSAppDelegate.h; sourceTree = "<group>"; };
 		645E83B8194AF8FF00CBCBA9 /* NOCSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NOCSAppDelegate.m; path = Example/NOCSAppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +75,8 @@
 		B38CDFE6AB70FC5141E5B12E /* Pods-CircleStatusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4A6A3E37E0D5F3AC994F43A /* Pods-CircleStatusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4DCF92A8E2F78A2A229F5B8 /* Pods-CircleStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus.release.xcconfig"; sourceTree = "<group>"; };
+		F094BBAE79192E97E9E2085B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FF8FFA9903FE65AD072989C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				645F4E9B19472315007D3B08 /* UIKit.framework in Frameworks */,
 				645F4E9719472315007D3B08 /* Foundation.framework in Frameworks */,
 				A7FB75AC1590E5404702BA66 /* libPods-CircleStatus.a in Frameworks */,
+				F1E65AC59BB4EA1232DF40FD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,8 @@
 				C4DCF92A8E2F78A2A229F5B8 /* Pods-CircleStatus.release.xcconfig */,
 				B38CDFE6AB70FC5141E5B12E /* Pods-CircleStatusTests.debug.xcconfig */,
 				B4A6A3E37E0D5F3AC994F43A /* Pods-CircleStatusTests.release.xcconfig */,
+				FF8FFA9903FE65AD072989C2 /* Pods.debug.xcconfig */,
+				F094BBAE79192E97E9E2085B /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 				645F4EB519472315007D3B08 /* XCTest.framework */,
 				1DDA004ACB8B0BE2D2D36B71 /* libPods-CircleStatus.a */,
 				A5B3EC0A530E3281C3C32FA4 /* libPods-CircleStatusTests.a */,
+				15E12C8CD00C5B6F227EE752 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -346,7 +354,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		59E3A691AC89508773CC4290 /* Check Pods Manifest.lock */ = {
@@ -536,7 +544,7 @@
 		};
 		645F4EC619472315007D3B08 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7107E6458B8FE646C5EEB5B1 /* Pods-CircleStatus.debug.xcconfig */;
+			baseConfigurationReference = FF8FFA9903FE65AD072989C2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -555,7 +563,7 @@
 		};
 		645F4EC719472315007D3B08 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4DCF92A8E2F78A2A229F5B8 /* Pods-CircleStatus.release.xcconfig */;
+			baseConfigurationReference = F094BBAE79192E97E9E2085B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
