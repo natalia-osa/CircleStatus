@@ -26,7 +26,6 @@
 		645F4EC019472315007D3B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EBE19472315007D3B08 /* InfoPlist.strings */; };
 		645F4EC219472315007D3B08 /* CircleStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EC119472315007D3B08 /* CircleStatusTests.m */; };
 		916E754CC7DE415E9BA9B806 /* libPods-CircleStatusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3EC0A530E3281C3C32FA4 /* libPods-CircleStatusTests.a */; };
-		A7FB75AC1590E5404702BA66 /* libPods-CircleStatus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDA004ACB8B0BE2D2D36B71 /* libPods-CircleStatus.a */; };
 		F1E65AC59BB4EA1232DF40FD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E12C8CD00C5B6F227EE752 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +86,6 @@
 				645F4E9919472315007D3B08 /* CoreGraphics.framework in Frameworks */,
 				645F4E9B19472315007D3B08 /* UIKit.framework in Frameworks */,
 				645F4E9719472315007D3B08 /* Foundation.framework in Frameworks */,
-				A7FB75AC1590E5404702BA66 /* libPods-CircleStatus.a in Frameworks */,
 				F1E65AC59BB4EA1232DF40FD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
