@@ -13,7 +13,6 @@ Pod::Spec.new do |spec|
 
   spec.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics']
 
-  # link with modules
   spec.subspec 'Core' do |cs|
       cs.dependency 'NOCategories'
   end

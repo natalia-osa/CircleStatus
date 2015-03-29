@@ -10,4 +10,13 @@
 
 @implementation NOCSLegendPair
 
+#pragma mark - Logging
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@: %p, %@: %@, %@: %@>",
+            NSStringFromClass([self class]), self,
+            NSStringFromSelector(@selector(colorDot)), self.colorDot,
+            NSStringFromSelector(@selector(label)), self.label];
+}
+
 @end

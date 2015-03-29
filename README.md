@@ -1,15 +1,16 @@
 [![Version](https://cocoapod-badges.herokuapp.com/v/CircleStatus/badge.png)](http://cocoadocs.org/docsets/CircleStatus) 
 [![Platform](https://cocoapod-badges.herokuapp.com/p/CircleStatus/badge.png)](http://cocoadocs.org/docsets/CircleStatus) 
+![License](https://img.shields.io/badge/license-Apache_2-green.svg?style=flat)
 
 <p align="center" ><img src="https://raw.github.com/natalia-osa/CircleStatus/master/ReadmeImages/outlook1.png" alt="CircleStatus" title="CircleStatus" height="480"></p>
 
 
-Small project to show circular chart with customizable number and range of colors on outer ring with background transparency/colors configuration. Demo project included. Works ok during orientation changes & redrawing. Supports also legend view.
+Small project to show circular chart with customisable number and range of colors on outer ring with background transparency/colors configuration. Demo project included. Works ok during orientation changes & redrawing. Supports also legend view.
 
 ## Examples:
-Customizable colors, legend can be turned off or on (to see legend on look at big screenshots below)
+Customisable colors, legend can be turned off or on (to see legend on look at big screenshots below)
 <p align="center" ><img src="https://raw.github.com/natalia-osa/CircleStatus/master/ReadmeImages/demo1.png" alt="CircleStatus img1" title="Customizable colors" height="100"></p>
-Customizable percentage of each color in ring. You can also change the point where you want to start drawing colors:
+Customisable percentage of each color in ring. You can also change the point where you want to start drawing colors:
 <p align="center" ><img src="https://raw.github.com/natalia-osa/CircleStatus/master/ReadmeImages/demo2.png" alt="CircleStatus img2" title="Customizable percentage of each color in ring. You can also change the point where you want to start drawing colors" height="100"></p>
 You can attach image or text (or nothing) in the middle:
 <p align="center" ><img src="https://raw.github.com/natalia-osa/CircleStatus/master/ReadmeImages/demo3.png" alt="CircleStatus img3" title="You can attach image or text (or nothing) in the middle" height="100"></p>
@@ -29,7 +30,7 @@ You can do much more than this ^^
 
 ## Installation:
 #### Installation with CocoaPods
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking).
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries.
 ```ruby
 pod "CircleStatus"
 ```
@@ -42,35 +43,24 @@ git submodule update
 ```
 Copy all files from CircleStatus/CircleStatus folder.
 #### Just download & attach
-This is strongly disadvised as you won't be able to see code updates. Clone or download the source, copy all files from CircleStatus/CircleStatus folder.
+This is strongly misadvised as you won't be able to see code updates. Clone or download the source, copy all files from CircleStatus/CircleStatus folder.
 
 ## Implementation:
 Clone and see the demo for more examples about implementation. You can add the view via Storyboard or using code:
 ```objective-c
 // in your view.h download the library
-#import <CircleStatus/CSView.h>
+#import <CircleStatus/NOCSView.h>
 // then add a property
-@property (nonatomic, strong) CSView *csView;
+@property (nonatomic, strong) NOCSView *csView;
 
 // alloc & init the view or setup this via storyboard
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _csView = [[CSView alloc] init];
+        _csView = [[NOCSView alloc] initWithFrame:frame]; // + update the frame
         [self addSubview:_csView];
     }
     return self;
-}
-
-// update the frame
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    CGRect bounds = self.bounds;
-    CGSize csSize = CGSizeMake(CGRectGetWidth(bounds) - 20.f, 100.f); // chart size
-    csSize.height = [_csView.legendView heightForChartSize:csSize]; // request chart height from legendView
-    
-    [_csView setFrame:CGRectIntegral(CGRectMake(CGRectGetMidX(bounds) - (csSize.width / 2), CGRectGetMidY(bounds) - (csSize.height / 2), csSize.width, csSize.height))];
 }
 
 // in your controller you can change outlook of the control
@@ -78,8 +68,8 @@ Clone and see the demo for more examples about implementation. You can add the v
     [super viewDidLoad];
     
     // fill with data
-    [_csExampleView.csView setPercentageColorArray:@[[[CSPercentageColor alloc] initWithColor:[UIColor greenColor] percentage:0.7f],
-                                                     [[CSPercentageColor alloc] initWithColor:[UIColor yellowColor] percentage:0.3f]]];
+    [_csExampleView.csView setPercentageColorArray:@[[[NOCSPercentageColor alloc] initWithColor:[UIColor greenColor] percentage:0.7f],
+                                                     [[NOCSPercentageColor alloc] initWithColor:[UIColor yellowColor] percentage:0.3f]]];
     // setup middle view: either text or image or nothing
     [_csExampleView.csView.textLabel setText:@"Chart"];
 //    [_csExampleView.csView.imageView setImage:[UIImage imageNamed:@"test"]];
@@ -113,4 +103,4 @@ Available under the Apache 2.0 license. See the LICENSE file for more info.
 
 ## Requirements
 
-Requires Xcode 5, targeting either iOS 5.0 or higher
+Requires Xcode 5, targeting either iOS 5.1.1 or higher

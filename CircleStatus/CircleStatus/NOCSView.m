@@ -14,7 +14,7 @@
 
 @implementation NOCSView
 
-#pragma mark - Inits
+#pragma mark - Memory management
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -61,7 +61,7 @@
     [self setShowsLegend:YES];
 }
 
-#pragma mark - Setters
+#pragma mark - Setters / Getters
 
 - (void)setPercentageColorArray:(NSArray *)percentageColorArray {
     _percentageColorArray = percentageColorArray;
@@ -207,6 +207,16 @@
 
 - (CGFloat)csLegendViewRequiresChartHeight:(NOCSLegendView *)csLegendView {
     return self.radius * 2 + self.lineWidth;
+}
+
+#pragma mark - Logging
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@: %p, %@: %@, %@: %lu, %@: %d>",
+            NSStringFromClass([self class]), self,
+            NSStringFromSelector(@selector(percentageColorArray)), self.percentageColorArray,
+            NSStringFromSelector(@selector(startAngle)), (unsigned long)self.startAngle,
+            NSStringFromSelector(@selector(showsLegend)), (int)self.showsLegend];
 }
 
 @end

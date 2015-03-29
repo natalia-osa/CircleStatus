@@ -20,7 +20,7 @@
 
 @implementation NOCSLegendView
 
-#pragma mark - Inits
+#pragma mark - Memory management
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -44,7 +44,7 @@
     _dotSize = CGSizeMake(10.f, 10.f);
 }
 
-#pragma mark - Setters
+#pragma mark - Setters / Getters
 
 - (void)setShowPercentage:(BOOL)showPercentage {
     _showPercentage = showPercentage;
@@ -176,6 +176,16 @@
     }
     
     return labelsHeight;
+}
+
+#pragma mark - Logging
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@: %p, %@: %d, %@: %lu, %@: %@>",
+            NSStringFromClass([self class]), self,
+            NSStringFromSelector(@selector(showPercentage)), (int)self.showPercentage,
+            NSStringFromSelector(@selector(legendPosition)), (unsigned long)self.legendPosition,
+            NSStringFromSelector(@selector(percentageColorArray)), self.percentageColorArray];
 }
 
 @end
