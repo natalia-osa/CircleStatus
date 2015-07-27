@@ -7,7 +7,7 @@
 //
 
 #import "NOCSView.h"
-#import <NOCategories/NOCMacros.h>
+#import <NOCategories/NOCCGFloatMath.h>
 #import "float.h"
 
 #define angleFromPercent(x) (2 * M_PI * x)

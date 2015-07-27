@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		642194E11B66343D00EFC1E8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642194E01B66343D00EFC1E8 /* Launch Screen.storyboard */; };
 		645E83B9194AF8FF00CBCBA9 /* NOCSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83B8194AF8FF00CBCBA9 /* NOCSAppDelegate.m */; };
 		645E83BE194AF91500CBCBA9 /* NOCSExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83BB194AF91500CBCBA9 /* NOCSExampleView.m */; };
 		645E83BF194AF91500CBCBA9 /* NOCSExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83BD194AF91500CBCBA9 /* NOCSExampleViewController.m */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		15E12C8CD00C5B6F227EE752 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDA004ACB8B0BE2D2D36B71 /* libPods-CircleStatus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleStatus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		642194E01B66343D00EFC1E8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		645E83B7194AF8FF00CBCBA9 /* NOCSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NOCSAppDelegate.h; path = Example/NOCSAppDelegate.h; sourceTree = "<group>"; };
 		645E83B8194AF8FF00CBCBA9 /* NOCSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NOCSAppDelegate.m; path = Example/NOCSAppDelegate.m; sourceTree = "<group>"; };
 		645E83BA194AF91500CBCBA9 /* NOCSExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NOCSExampleView.h; path = Example/NOCSExampleView.h; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				645F4EAE19472315007D3B08 /* Images.xcassets */,
+				642194E01B66343D00EFC1E8 /* Launch Screen.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -292,7 +295,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NOCS;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = iOskApps;
 				TargetAttributes = {
 					645F4EB319472315007D3B08 = {
@@ -324,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642194E11B66343D00EFC1E8 /* Launch Screen.storyboard in Resources */,
 				645F4EAF19472315007D3B08 /* Images.xcassets in Resources */,
 				645F4EA119472315007D3B08 /* InfoPlist.strings in Resources */,
 			);
@@ -488,6 +492,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -502,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -534,7 +539,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -550,7 +555,8 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "CircleStatus/CircleStatus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ioskapps.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wfloat-equal";
@@ -569,7 +575,8 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "CircleStatus/CircleStatus-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ioskapps.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wfloat-equal";
@@ -594,9 +601,12 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "CircleStatusTests/CircleStatusTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ioskapps.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WARNING_CFLAGS = "-Wfloat-equal";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -613,9 +623,12 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "CircleStatusTests/CircleStatusTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ioskapps.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WARNING_CFLAGS = "-Wfloat-equal";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

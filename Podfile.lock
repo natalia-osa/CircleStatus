@@ -1,16 +1,16 @@
 PODS:
-  - Expecta (0.2.4)
-  - NOCategories (0.4.1)
-  - Specta (0.4.0)
+  - Expecta (1.0.2)
+  - NOCategories (0.4.2)
+  - Specta (1.0.3)
 
 DEPENDENCIES:
-  - Expecta (~> 0.2.4)
+  - Expecta (~> 1.0)
   - NOCategories
-  - Specta (~> 0.4)
+  - Specta (~> 1.0)
 
 SPEC CHECKSUMS:
-  Expecta: cfaf1d3e2e194ca704a25e997093d30a1ce70b61
-  NOCategories: d10bdd9aaf9d698deffd1e2e7cf4fa6ac7d6614e
-  Specta: a353759f073ffcc0a365b782fe4aaeac064c03c6
+  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  NOCategories: 14bcd2572a9093129aa2d616ceb86bb1531cd0d6
+  Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
 
-COCOAPODS: 0.36.1
+COCOAPODS: 0.38.2

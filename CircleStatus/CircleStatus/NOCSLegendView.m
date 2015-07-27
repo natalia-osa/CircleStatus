@@ -10,7 +10,7 @@
 #import "NOCSLegendPair.h"
 #import "NOCSPercentageColor.h"
 #import <NOCategories/NSString+NOCSize.h>
-#import <NOCategories/NOCMacros.h>
+#import <NOCategories/NOCCGFloatMath.h>
 
 @interface NOCSLegendView()
 
