@@ -104,3 +104,7 @@ Available under the Apache 2.0 license. See the LICENSE file for more info.
 ## Requirements
 
 Requires Xcode 5, targeting either iOS 5.1.1 or higher
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/natalia-osa/circlestatus/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
