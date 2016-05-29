@@ -18,7 +18,7 @@ IB_DESIGNABLE
 @interface NOCSView : UIView<NOCSLegendViewDelegate>
 
 /// By default 1 gray color. Please note that total percentages from this array must give 1.f or less in total. If it is less, in the end of the circle we'll have 'clear' space.
-@property (nonatomic, nullable) NSArray *percentageColorArray;
+@property (nonatomic, nullable) NSArray<NOCSPercentageColor *> *percentageColorArray;
 
 /// Use to determine width of outer line. By default 10.f.
 @property (nonatomic) IBInspectable CGFloat lineWidth;

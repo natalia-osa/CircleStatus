@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, CSLegendPosition) {
     CSLegendPositionLeft
 };
 
-@class NOCSLegendView, CSLegendViewDelegate;
+@class NOCSLegendView, NOCSPercentageColor, CSLegendViewDelegate;
 
 /// Protocol used by CSView.
 @protocol NOCSLegendViewDelegate <NSObject>
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSUInteger, CSLegendPosition) {
 @property (nonatomic) CSLegendPosition legendPosition;
 
 /// Overloading this may cause legend to be incompatible with CSView. CSView is handling this variable.
-@property (nonatomic, nullable) NSArray *percentageColorArray;
+@property (nonatomic, nullable) NSArray<NOCSPercentageColor *> *percentageColorArray;
 
 /// Size of coloured dot (view) before text description.
 @property (nonatomic) CGSize dotSize;
