@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// The position determines where CSView will locate CSLegendView.
 typedef NS_ENUM(NSUInteger, CSLegendPosition) {
     CSLegendPositionTop = 0,
@@ -34,7 +36,7 @@ typedef NS_ENUM(NSUInteger, CSLegendPosition) {
 @interface NOCSLegendView : UIView
 
 /// Delegate implemented by CSView
-@property (nonatomic, weak) id<NOCSLegendViewDelegate> delegate;
+@property (nonatomic, weak, nullable) id<NOCSLegendViewDelegate> delegate;
 
 /// The order is color - percentage - title. By default shows the percentage (YES).
 @property (nonatomic) BOOL showPercentage;
@@ -43,7 +45,7 @@ typedef NS_ENUM(NSUInteger, CSLegendPosition) {
 @property (nonatomic) CSLegendPosition legendPosition;
 
 /// Overloading this may cause legend to be incompatible with CSView. CSView is handling this variable.
-@property (nonatomic) NSArray *percentageColorArray;
+@property (nonatomic, nullable) NSArray *percentageColorArray;
 
 /// Size of coloured dot (view) before text description.
 @property (nonatomic) CGSize dotSize;
@@ -76,3 +78,5 @@ typedef NS_ENUM(NSUInteger, CSLegendPosition) {
 - (CGFloat)heightForChartSize:(CGSize)size;
 
 @end
+
+NS_ASSUME_NONNULL_END

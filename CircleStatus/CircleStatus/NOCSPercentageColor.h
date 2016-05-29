@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// Model class to fill percentageColorArray. Please note that the order is important.
 @interface NOCSPercentageColor : NSObject
 
@@ -30,3 +32,5 @@
 - (instancetype)initWithTitle:(NSString *)title color:(UIColor *)color percentage:(CGFloat)percentage;
 
 @end
+
+NS_ASSUME_NONNULL_END

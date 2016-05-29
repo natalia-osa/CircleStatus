@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "NOCSView.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NOCSExampleView : UIView
 
 @property (nonatomic, readonly) NOCSView *csView;
 
 @end
+
+NS_ASSUME_NONNULL_END

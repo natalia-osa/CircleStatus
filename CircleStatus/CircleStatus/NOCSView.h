@@ -10,13 +10,15 @@
 #import "NOCSLegendView.h"
 #import "NOCSPercentageColor.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 IB_DESIGNABLE
 
 /// Use to draw circle with selected properties in the middle of the view.
 @interface NOCSView : UIView<NOCSLegendViewDelegate>
 
 /// By default 1 gray color. Please note that total percentages from this array must give 1.f or less in total. If it is less, in the end of the circle we'll have 'clear' space.
-@property (nonatomic) NSArray *percentageColorArray;
+@property (nonatomic, nullable) NSArray *percentageColorArray;
 
 /// Use to determine width of outer line. By default 10.f.
 @property (nonatomic) IBInspectable CGFloat lineWidth;
@@ -55,3 +57,5 @@ IB_DESIGNABLE
 - (void)commonInit;
 
 @end
+
+NS_ASSUME_NONNULL_END

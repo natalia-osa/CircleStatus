@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// Model class to keep reference to views inserted into CSLegendView.
 @interface NOCSLegendPair : NSObject
 
@@ -18,3 +20,5 @@
 @property (nonatomic) UILabel *label;
 
 @end
+
+NS_ASSUME_NONNULL_END
