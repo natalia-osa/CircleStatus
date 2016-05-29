@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.csExampleView.csView setPercentageColorArray:@[[[NOCSPercentageColor alloc] initWithTitle:@"One" color:[UIColor blackColor] percentage:0.1f],
+    [self.csExampleView.csView setPercentageColorArray:@[[[NOCSPercentageColor alloc] initWithTitle:@"One" color:[UIColor blackColor] percentage:0.2f],
                                                          [[NOCSPercentageColor alloc] initWithTitle:@"Two" color:[UIColor yellowColor] percentage:0.1f],
                                                          [[NOCSPercentageColor alloc] initWithTitle:@"Three" color:[UIColor greenColor] percentage:0.1f],
                                                          [[NOCSPercentageColor alloc] initWithTitle:@"Four" color:[UIColor redColor] percentage:0.2f],

@@ -79,6 +79,10 @@
 
 - (void)setPercentageColorArray:(NSArray *)percentageColorArray {
     _percentageColorArray = percentageColorArray;
+    
+    // make sure data is ok
+    [self validateData];
+    
     // if we have legend view, redraw it also
     if (self.legendView) {
         [self.legendView setPercentageColorArray:percentageColorArray];
@@ -110,7 +114,7 @@
 }
 
 - (void)setStartAngle:(NSUInteger)startAngle {
-    _startAngle = startAngle;
+    _startAngle = startAngle % 360;
     
     [self setNeedsDisplay];
 }
@@ -143,9 +147,6 @@
         NSLog(@"You should supply radius value to skip any unexpected behaviour.");
         self.radius = (MIN(CGRectGetWidth(rect), CGRectGetHeight(rect)) - self.lineWidth) / 2;
     }
-    
-    // make sure data is ok
-    [self validateData];
 
     // draw the circle
     [self drawCircle];
@@ -242,17 +243,21 @@
 - (void)validateData {
     CGFloat totalPercent = 0.f;
     for (NOCSPercentageColor *percColor in self.percentageColorArray) {
-        // isPercentageColorClass
+        // Check percentage color class
         NSAssert([percColor isKindOfClass:[NOCSPercentageColor class]], @"All data in percentageColorArray must be CSPercentageColor instance");
-        // isBetween0And1
-        NSAssert((percColor.percentage > 0.f || percColor.percentage < 1.f), @"Percentage must be between (0.f; 1.f)");
+        // Check if the color percentage is betweeen <0, 1>
+        if (percColor.percentage < 0 || noc_isCGFloatMoreThanCGFloat(percColor.percentage, 1)) {
+            NSLog(@"NOCircleStatus | ERROR | The color percentage is not between <0, 1>, the graph will be invalid");
+        }
         
         totalPercent += percColor.percentage;
     }
-    // sumEquals1
-    NSAssert((noc_isCGFloatEqualToCGFloat(1.f, totalPercent) || totalPercent < 1.f), @"The sum of percentages must be below or equal 1.f");
-    // angleIsBelow360
-    NSAssert((noc_isCGFloatLessOrEqualToCGFloat(self.startAngle, 360)), @"Start angle can be only <0, 360>");
+    // sum of color percentages <= 1
+    if (totalPercent < 0 || totalPercent > 1.001) { // the value may be more different than epsylon in case of adding many floating values
+         NSLog(@"NOCircleStatus | ERROR | The colors percentage is not between <0, 1>, the graph will be invalid");
+    }
+    // startAngle < 360
+    NSAssert(noc_isCGFloatLessOrEqualToCGFloat(self.startAngle, 360), @"Start angle can be only <0, 360>");
 }
 
 #pragma mark - CSLegendViewDelegate

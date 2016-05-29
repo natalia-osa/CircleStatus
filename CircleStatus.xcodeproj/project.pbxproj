@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CF29AFC85B18D4F245EDC2B /* libPods-CircleStatusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DCAEFDCC975FA277C44F08 /* libPods-CircleStatusTests.a */; };
 		642194E11B66343D00EFC1E8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642194E01B66343D00EFC1E8 /* Launch Screen.storyboard */; };
 		645E83B9194AF8FF00CBCBA9 /* NOCSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83B8194AF8FF00CBCBA9 /* NOCSAppDelegate.m */; };
 		645E83BE194AF91500CBCBA9 /* NOCSExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E83BB194AF91500CBCBA9 /* NOCSExampleView.m */; };
@@ -27,8 +28,7 @@
 		645F4EC019472315007D3B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EBE19472315007D3B08 /* InfoPlist.strings */; };
 		645F4EC219472315007D3B08 /* CircleStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EC119472315007D3B08 /* CircleStatusTests.m */; };
 		64FFBDB11B7A43D900BC3E75 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FFBDB01B7A43D900BC3E75 /* Storyboard.storyboard */; };
-		916E754CC7DE415E9BA9B806 /* libPods-CircleStatusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3EC0A530E3281C3C32FA4 /* libPods-CircleStatusTests.a */; };
-		F1E65AC59BB4EA1232DF40FD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E12C8CD00C5B6F227EE752 /* libPods.a */; };
+		BE2E31677FDB393E68585933 /* libPods-CircleStatus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5C35AE68F8B2A2AF2D0213 /* libPods-CircleStatus.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		15E12C8CD00C5B6F227EE752 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DDA004ACB8B0BE2D2D36B71 /* libPods-CircleStatus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleStatus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		642194E01B66343D00EFC1E8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		645E83B7194AF8FF00CBCBA9 /* NOCSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NOCSAppDelegate.h; path = Example/NOCSAppDelegate.h; sourceTree = "<group>"; };
 		645E83B8194AF8FF00CBCBA9 /* NOCSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NOCSAppDelegate.m; path = Example/NOCSAppDelegate.m; sourceTree = "<group>"; };
@@ -73,13 +71,12 @@
 		645F4EBF19472315007D3B08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		645F4EC119472315007D3B08 /* CircleStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleStatusTests.m; sourceTree = "<group>"; };
 		64FFBDB01B7A43D900BC3E75 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Example/Storyboard.storyboard; sourceTree = "<group>"; };
-		7107E6458B8FE646C5EEB5B1 /* Pods-CircleStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus.debug.xcconfig"; sourceTree = "<group>"; };
-		A5B3EC0A530E3281C3C32FA4 /* libPods-CircleStatusTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleStatusTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B38CDFE6AB70FC5141E5B12E /* Pods-CircleStatusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B4A6A3E37E0D5F3AC994F43A /* Pods-CircleStatusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests.release.xcconfig"; sourceTree = "<group>"; };
-		C4DCF92A8E2F78A2A229F5B8 /* Pods-CircleStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus.release.xcconfig"; sourceTree = "<group>"; };
-		F094BBAE79192E97E9E2085B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FF8FFA9903FE65AD072989C2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6AFF6172655B0789961CA0F3 /* Pods-CircleStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus.debug.xcconfig"; sourceTree = "<group>"; };
+		6D5C35AE68F8B2A2AF2D0213 /* libPods-CircleStatus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleStatus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0365F047A25646501C6C4F /* Pods-CircleStatusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E1DEA55CBA03E9F6CE70FF0 /* Pods-CircleStatusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8DCAEFDCC975FA277C44F08 /* libPods-CircleStatusTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleStatusTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4D77E06A11425F887FF2306 /* Pods-CircleStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +87,7 @@
 				645F4E9919472315007D3B08 /* CoreGraphics.framework in Frameworks */,
 				645F4E9B19472315007D3B08 /* UIKit.framework in Frameworks */,
 				645F4E9719472315007D3B08 /* Foundation.framework in Frameworks */,
-				F1E65AC59BB4EA1232DF40FD /* libPods.a in Frameworks */,
+				BE2E31677FDB393E68585933 /* libPods-CircleStatus.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,26 +98,13 @@
 				645F4EB619472315007D3B08 /* XCTest.framework in Frameworks */,
 				645F4EB819472315007D3B08 /* UIKit.framework in Frameworks */,
 				645F4EB719472315007D3B08 /* Foundation.framework in Frameworks */,
-				916E754CC7DE415E9BA9B806 /* libPods-CircleStatusTests.a in Frameworks */,
+				2CF29AFC85B18D4F245EDC2B /* libPods-CircleStatusTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1AAFA31B6EE52CA39B7C5312 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7107E6458B8FE646C5EEB5B1 /* Pods-CircleStatus.debug.xcconfig */,
-				C4DCF92A8E2F78A2A229F5B8 /* Pods-CircleStatus.release.xcconfig */,
-				B38CDFE6AB70FC5141E5B12E /* Pods-CircleStatusTests.debug.xcconfig */,
-				B4A6A3E37E0D5F3AC994F43A /* Pods-CircleStatusTests.release.xcconfig */,
-				FF8FFA9903FE65AD072989C2 /* Pods.debug.xcconfig */,
-				F094BBAE79192E97E9E2085B /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		642A46BD19498C0A0073D8E5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +134,7 @@
 				645F4EBB19472315007D3B08 /* CircleStatusTests */,
 				645F4E9519472315007D3B08 /* Frameworks */,
 				645F4E9419472315007D3B08 /* Products */,
-				1AAFA31B6EE52CA39B7C5312 /* Pods */,
+				77BE183A579BCFEF8CFF3283 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,9 +154,8 @@
 				645F4E9819472315007D3B08 /* CoreGraphics.framework */,
 				645F4E9A19472315007D3B08 /* UIKit.framework */,
 				645F4EB519472315007D3B08 /* XCTest.framework */,
-				1DDA004ACB8B0BE2D2D36B71 /* libPods-CircleStatus.a */,
-				A5B3EC0A530E3281C3C32FA4 /* libPods-CircleStatusTests.a */,
-				15E12C8CD00C5B6F227EE752 /* libPods.a */,
+				E8DCAEFDCC975FA277C44F08 /* libPods-CircleStatusTests.a */,
+				6D5C35AE68F8B2A2AF2D0213 /* libPods-CircleStatus.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,6 +231,17 @@
 			name = CircleStatus;
 			sourceTree = "<group>";
 		};
+		77BE183A579BCFEF8CFF3283 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E1DEA55CBA03E9F6CE70FF0 /* Pods-CircleStatusTests.debug.xcconfig */,
+				8A0365F047A25646501C6C4F /* Pods-CircleStatusTests.release.xcconfig */,
+				6AFF6172655B0789961CA0F3 /* Pods-CircleStatus.debug.xcconfig */,
+				F4D77E06A11425F887FF2306 /* Pods-CircleStatus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,12 +249,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 645F4EC519472315007D3B08 /* Build configuration list for PBXNativeTarget "CircleStatus" */;
 			buildPhases = (
-				ACBD18F36F94042F6D8E23D3 /* Check Pods Manifest.lock */,
+				720597DC89AC2DE3C360DB7E /* 📦 Check Pods Manifest.lock */,
 				645F4E8F19472315007D3B08 /* Sources */,
 				645F4E9019472315007D3B08 /* Frameworks */,
 				645F4E9119472315007D3B08 /* Resources */,
 				OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */,
-				2069CE9C8EB09A552220F10F /* Copy Pods Resources */,
+				85C93A86501FA20BC0C449E0 /* 📦 Embed Pods Frameworks */,
+				358C90896F52BE310A91058F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,11 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 645F4EC819472315007D3B08 /* Build configuration list for PBXNativeTarget "CircleStatusTests" */;
 			buildPhases = (
-				59E3A691AC89508773CC4290 /* Check Pods Manifest.lock */,
+				491BF955218917B020655C30 /* 📦 Check Pods Manifest.lock */,
 				645F4EB019472315007D3B08 /* Sources */,
 				645F4EB119472315007D3B08 /* Frameworks */,
 				645F4EB219472315007D3B08 /* Resources */,
-				EF3D11337704E41DC8EDAD07 /* Copy Pods Resources */,
+				F742B0AD8349A86973EF1078 /* 📦 Embed Pods Frameworks */,
+				E247224B4AED0A369E317452 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,44 +344,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2069CE9C8EB09A552220F10F /* Copy Pods Resources */ = {
+		358C90896F52BE310A91058F /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		59E3A691AC89508773CC4290 /* Check Pods Manifest.lock */ = {
+		491BF955218917B020655C30 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		ACBD18F36F94042F6D8E23D3 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,19 +374,64 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EF3D11337704E41DC8EDAD07 /* Copy Pods Resources */ = {
+		720597DC89AC2DE3C360DB7E /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		85C93A86501FA20BC0C449E0 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E247224B4AED0A369E317452 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F742B0AD8349A86973EF1078 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */ = {
@@ -551,7 +577,7 @@
 		};
 		645F4EC619472315007D3B08 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF8FFA9903FE65AD072989C2 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6AFF6172655B0789961CA0F3 /* Pods-CircleStatus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -571,7 +597,7 @@
 		};
 		645F4EC719472315007D3B08 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F094BBAE79192E97E9E2085B /* Pods.release.xcconfig */;
+			baseConfigurationReference = F4D77E06A11425F887FF2306 /* Pods-CircleStatus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -591,7 +617,7 @@
 		};
 		645F4EC919472315007D3B08 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B38CDFE6AB70FC5141E5B12E /* Pods-CircleStatusTests.debug.xcconfig */;
+			baseConfigurationReference = 8E1DEA55CBA03E9F6CE70FF0 /* Pods-CircleStatusTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CircleStatus.app/CircleStatus";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -617,7 +643,7 @@
 		};
 		645F4ECA19472315007D3B08 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4A6A3E37E0D5F3AC994F43A /* Pods-CircleStatusTests.release.xcconfig */;
+			baseConfigurationReference = 8A0365F047A25646501C6C4F /* Pods-CircleStatusTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CircleStatus.app/CircleStatus";
 				FRAMEWORK_SEARCH_PATHS = (
