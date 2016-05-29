@@ -83,6 +83,30 @@
     [self setNeedsDisplay];
 }
 
+- (void)setRadius:(CGFloat)radius {
+    _radius = radius;
+    
+    [self setNeedsDisplay];
+}
+
+- (void)setLineWidth:(CGFloat)lineWidth {
+    _lineWidth = lineWidth;
+    
+    [self setNeedsDisplay];
+}
+
+- (void)setStartAngle:(NSUInteger)startAngle {
+    _startAngle = startAngle;
+    
+    [self setNeedsDisplay];
+}
+
+- (void)setFillColor:(UIColor *)fillColor {
+    _fillColor = fillColor;
+    
+    [self setNeedsDisplay];
+}
+
 #pragma mark - Class methods
 
 - (void)drawRect:(CGRect)rect {
@@ -97,6 +121,26 @@
 
     // draw the circle
     [self drawCircle];
+}
+
+//- (void)prepareForInterfaceBuilder {
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    [self setPercentageColorArray:@[[[NOCSPercentageColor alloc] initWithTitle:@"One" color:[UIColor blackColor] percentage:0.1f],
+                                    [[NOCSPercentageColor alloc] initWithTitle:@"Two" color:[UIColor yellowColor] percentage:0.1f],
+                                    [[NOCSPercentageColor alloc] initWithTitle:@"Three" color:[UIColor greenColor] percentage:0.1f],
+                                    [[NOCSPercentageColor alloc] initWithTitle:@"Four" color:[UIColor redColor] percentage:0.2f],
+                                    [[NOCSPercentageColor alloc] initWithTitle:@"Five" color:[UIColor purpleColor] percentage:0.05f],
+                                    [[NOCSPercentageColor alloc] initWithTitle:@"Six" color:[UIColor brownColor] percentage:0.05f],
+                                    [[NOCSPercentageColor alloc] initWithTitle:@"Seven with a very long description to see how the linebreak mode works - blah blah blah ^^"
+                                                                       color:[UIColor whiteColor] percentage:0.3f]]];
+    [self.textLabel setText:@"Chart"];
+//    [self setFillColor:[UIColor clearColor]];
+//    [self setStartAngle:15];
+//    [self setLineWidth:10];
+//    [self setRadius:50.f];
+//    [self.legendView setLegendPosition:CSLegendPositionRight];
 }
 
 #pragma mark - Drawing

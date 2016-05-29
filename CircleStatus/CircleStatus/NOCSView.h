@@ -10,6 +10,8 @@
 #import "NOCSLegendView.h"
 #import "NOCSPercentageColor.h"
 
+IB_DESIGNABLE
+
 /// Use to draw circle with selected properties in the middle of the view.
 @interface NOCSView : UIView<NOCSLegendViewDelegate>
 
@@ -17,13 +19,13 @@
 @property (nonatomic) NSArray *percentageColorArray;
 
 /// Use to determine width of outer line. By default 10.f.
-@property (nonatomic) CGFloat lineWidth;
+@property (nonatomic) IBInspectable CGFloat lineWidth;
 
 /// Use to change place, where 1st item is being drawn. Acceptable values (0; 360). Default 270.f (top middle). Eg 180 is left, 0 right, 45 is right bottom 'corner' etc.
-@property (nonatomic) NSUInteger startAngle;
+@property (nonatomic) IBInspectable NSUInteger startAngle;
 
 /// Use to fill the circle with given color. Set to clearColor to skip this step. Default whiteColor.
-@property (nonatomic) UIColor *fillColor;
+@property (nonatomic) IBInspectable UIColor *fillColor;
 
 /// Label describing text in the middle. There is no default value, so it'll be invisible until you set it.
 @property (nonatomic, readonly) UILabel *textLabel;
@@ -35,10 +37,10 @@
 @property (nonatomic, readonly) NOCSLegendView *legendView;
 
 /// Whether to show legend. Position configurable via legendPosition property. Default YES.
-@property (nonatomic) BOOL showsLegend;
+@property (nonatomic) IBInspectable BOOL showsLegend;
 
 /// REQUIRED. Determines the radius of a chart. If not supported, will auto-adjust to csView.frame, but Left/Right positions of legend can return wrong height calculation.
-@property (nonatomic) CGFloat radius;
+@property (nonatomic) IBInspectable CGFloat radius;
 
 /**
  * Advanced: Overload the method to skip validation.

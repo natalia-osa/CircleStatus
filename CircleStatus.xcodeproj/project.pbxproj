@@ -26,6 +26,7 @@
 		645F4EB819472315007D3B08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F4E9A19472315007D3B08 /* UIKit.framework */; };
 		645F4EC019472315007D3B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645F4EBE19472315007D3B08 /* InfoPlist.strings */; };
 		645F4EC219472315007D3B08 /* CircleStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 645F4EC119472315007D3B08 /* CircleStatusTests.m */; };
+		64FFBDB11B7A43D900BC3E75 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FFBDB01B7A43D900BC3E75 /* Storyboard.storyboard */; };
 		916E754CC7DE415E9BA9B806 /* libPods-CircleStatusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B3EC0A530E3281C3C32FA4 /* libPods-CircleStatusTests.a */; };
 		F1E65AC59BB4EA1232DF40FD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E12C8CD00C5B6F227EE752 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		645F4EBD19472315007D3B08 /* CircleStatusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircleStatusTests-Info.plist"; sourceTree = "<group>"; };
 		645F4EBF19472315007D3B08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		645F4EC119472315007D3B08 /* CircleStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleStatusTests.m; sourceTree = "<group>"; };
+		64FFBDB01B7A43D900BC3E75 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Example/Storyboard.storyboard; sourceTree = "<group>"; };
 		7107E6458B8FE646C5EEB5B1 /* Pods-CircleStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatus/Pods-CircleStatus.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B3EC0A530E3281C3C32FA4 /* libPods-CircleStatusTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleStatusTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38CDFE6AB70FC5141E5B12E /* Pods-CircleStatusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleStatusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleStatusTests/Pods-CircleStatusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		645F4ECF19473250007D3B08 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				64FFBDB01B7A43D900BC3E75 /* Storyboard.storyboard */,
 				645E83BC194AF91500CBCBA9 /* NOCSExampleViewController.h */,
 				645E83BD194AF91500CBCBA9 /* NOCSExampleViewController.m */,
 				645E83BA194AF91500CBCBA9 /* NOCSExampleView.h */,
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				642194E11B66343D00EFC1E8 /* Launch Screen.storyboard in Resources */,
+				64FFBDB11B7A43D900BC3E75 /* Storyboard.storyboard in Resources */,
 				645F4EAF19472315007D3B08 /* Images.xcassets in Resources */,
 				645F4EA119472315007D3B08 /* InfoPlist.strings in Resources */,
 			);
