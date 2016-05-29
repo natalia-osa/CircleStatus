@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
   spec.name         = "CircleStatus"
-  spec.version      = "1.2.1"
+  spec.version      = "1.2.2"
   spec.summary      = "Ring shaped chart with legend option."
   spec.homepage     = "https://github.com/natalia-osa/"
   spec.license      = 'Apache 2.0'
   spec.author       = { "natalia.osiecka" => "osiecka.n@gmail.com" }
-  spec.source       = { :git => 'https://github.com/natalia-osa/CircleStatus.git', :tag => '1.2.1'}
+  spec.source       = { :git => 'https://github.com/natalia-osa/CircleStatus.git', :tag => '1.2.2'}
 
   spec.requires_arc = true
   spec.ios.deployment_target = '6.0'
